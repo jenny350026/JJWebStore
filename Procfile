@@ -1,2 +1,2 @@
-web: gunicorn JJWebStore.wsgi
+web: gunicorn JJWebStore.wsgi --log-file -
 
