@@ -26,7 +26,7 @@ class InventoriesAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
 	fields = ['name', 'category', 'gender', 'price_purchased', 'price_recommended']
-	inlines = [InventoriesInline, PictureInline]
+	inlines = [InventoriesInline, SalesPriceInline, PictureInline]
 
 	list_display = ('name', 'category','gender', 'price_recommended')
 	

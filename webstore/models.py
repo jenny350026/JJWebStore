@@ -3,16 +3,6 @@ from django.db import models
 
 # Create your models here.
 
-## EXMAMPLES
-#class Poll(models.Model):
-#    question = models.CharField(max_length=200)
-#    pub_date = models.DateTimeField('date published')
-#
-#class Choice(models.Model):
-#    poll = models.ForeignKey(Poll)
-#    choice_text = models.CharField(max_length=200)
-#    votes = models.IntegerField(default=0)
-
 class Category(models.Model):
 	name = models.CharField(u'類別名稱', max_length = 10)
 
@@ -57,6 +47,7 @@ class Picture(models.Model):
 		return "";
 
 class SalesPrice(models.Model):
+	product = models.ForeignKey(Product, verbose_name = u'商品名稱')
 	inventory = models.ForeignKey(Inventories, verbose_name = u'庫存')
 	price_sold = models.IntegerField(u'賣出價') 
 
