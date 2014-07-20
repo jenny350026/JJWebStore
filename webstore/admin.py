@@ -36,6 +36,9 @@ class ProductAdmin(admin.ModelAdmin):
 
 	#save_on_top = True
 
+class CategoryAdmin(admin.ModelAdmin):
+	verbose_name_plural = 'Categories'
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category)
