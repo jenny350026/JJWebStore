@@ -20,6 +20,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -46,6 +47,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+	'webstore',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -75,10 +77,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'JJWebStore_db',
-	'USER': 'jenny',
-	'PASSWORD': 'jenny350026@hotmail.com',
-	'HOST': '127.0.0.1',
-	'PORT': '5432'
+		'USER': 'jenny',
+		'PASSWORD': 'jenny350026@hotmail.com',
+		'HOST': '127.0.0.1',
+		'PORT': '5432'
     }
 }
 
