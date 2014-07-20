@@ -71,26 +71,9 @@ WSGI_APPLICATION = 'JJWebStore.wsgi.application'
 import dj_database_url
 
 ## from heroku
-#DATABASES['default'] =  dj_database_url.config()
-
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'JJWebStore_db',
-		'USER': 'jenny',
-		'PASSWORD': 'jenny350026@hotmail.com',
-		'HOST': '127.0.0.1',
-		'PORT': '5432'
-    }
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
 }
-
-## django defulat
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
