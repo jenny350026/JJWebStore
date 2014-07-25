@@ -36,7 +36,7 @@ class Inventories(models.Model):
 	date = models.DateTimeField(u'上傳日期')
 
 	def __unicode__(self):
-		return "";
+		return '\t'.join([self.size, self.color, self.serial_number]);
 
 class Picture(models.Model):
 	product = models.ForeignKey(Product, verbose_name = u'商品名稱')
@@ -52,5 +52,6 @@ class SalesPrice(models.Model):
 	price_sold = models.IntegerField(u'賣出價') 
 
 	def __unicode__(self):
-		return self.inventory.__unicode__()
+		#return self.inventory.__unicode__()
+		return ""
 
