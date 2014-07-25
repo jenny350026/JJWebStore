@@ -47,6 +47,7 @@ class Picture(models.Model):
 		return "";
 
 class SalesPrice(models.Model):
+	product = models.ForeignKey(Product, verbose_name = u'商品名稱')
 	inventory = models.ForeignKey(Inventories, verbose_name = u'庫存')
 	price_sold = models.IntegerField(u'賣出價') 
 
