@@ -73,7 +73,8 @@ import dj_database_url
 
 ## from heroku
 DATABASES = {
-    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    #'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+    'default': dj_database_url.config('postgres://akshjmjrjfvpgo:kXqAmPUYm82MfZ_s23lYy3Hpzd@ec2-54-197-227-238.compute-1.amazonaws.com:5432/d6luhgd9rljijk')
 }
 
 SOUTH_DATABASE_ADAPTERS = {
